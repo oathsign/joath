@@ -2,7 +2,6 @@ language: java
 jdk:
 - oraclejdk7
 sudo: false
-install: true
 script: mvn install
 after_success:
   - bash <(curl -s https://codecov.io/bash)
