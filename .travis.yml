@@ -5,7 +5,7 @@ sudo: false
 install: true
 script: mvn install
 after_success:
-  - mvn clean test jacoco:report
+  - mvn clean test jacoco:report coveralls:report
   - bash <(curl -s https://codecov.io/bash) -X coveragepy -B master
 ervice_name: travis-pro
 repo_token: fWJbWw2zRvMuZS2DbIhadTXTud9Q8YRQV
