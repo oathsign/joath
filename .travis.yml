@@ -2,6 +2,8 @@ language: java
 jdk:
 - oraclejdk7
 sudo: false
+install: true
 script: mvn install
 after_success:
+  - mvn clean test jacoco:report
   - bash <(curl -s https://codecov.io/bash)
